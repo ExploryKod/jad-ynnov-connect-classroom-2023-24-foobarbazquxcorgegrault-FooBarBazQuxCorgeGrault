@@ -1,9 +1,14 @@
 package com.jad;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Foo {
+
+    private List<Grault> graults;
+
     public Foo(final Bar bar) {
+        this.graults = new ArrayList<>();
     }
 
     public Bar getBar() {
@@ -23,11 +28,11 @@ public class Foo {
     }
 
     public List<Grault> getGraults() {
-        throw new UnsupportedOperationException("Not implemented yet");
+        return this.graults;
     }
 
     public void addGrault() {
-        throw new UnsupportedOperationException("Not implemented yet");
+        this.graults.add(new Grault(this));
     }
 
     public Corge getCorge() {
