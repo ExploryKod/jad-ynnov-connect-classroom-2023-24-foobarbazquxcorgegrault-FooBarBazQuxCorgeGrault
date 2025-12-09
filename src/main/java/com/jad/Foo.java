@@ -4,15 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Foo {
-
+    private Bar bar;
     private List<Grault> graults;
 
     public Foo(final Bar bar) {
+        this.bar = bar;
         this.graults = new ArrayList<>();
     }
 
     public Bar getBar() {
-        throw new UnsupportedOperationException("Not implemented yet");
+        return this.bar;
     }
 
     public List<Baz> getBazs() {
