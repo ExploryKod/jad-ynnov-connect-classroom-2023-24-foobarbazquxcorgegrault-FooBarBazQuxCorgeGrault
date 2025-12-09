@@ -6,10 +6,12 @@ import java.util.List;
 public class Foo {
     private Bar bar;
     private List<Grault> graults;
+    private Qux qux;
 
     public Foo(final Bar bar) {
         this.bar = bar;
         this.graults = new ArrayList<>();
+        this.qux = new Qux();
     }
 
     public Bar getBar() {
@@ -25,7 +27,7 @@ public class Foo {
     }
 
     public Qux getQux() {
-        throw new UnsupportedOperationException("Not implemented yet");
+         return this.qux;  
     }
 
     public List<Grault> getGraults() {
