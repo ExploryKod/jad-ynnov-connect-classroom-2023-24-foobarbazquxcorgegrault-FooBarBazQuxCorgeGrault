@@ -7,11 +7,13 @@ public class Foo {
     private Bar bar;
     private List<Grault> graults;
     private Qux qux;
+    private List<Baz> bazs;
 
     public Foo(final Bar bar) {
         this.bar = bar;
         this.graults = new ArrayList<>();
         this.qux = new Qux();
+        this.bazs = new ArrayList<>();
     }
 
     public Bar getBar() {
@@ -19,11 +21,11 @@ public class Foo {
     }
 
     public List<Baz> getBazs() {
-        throw new UnsupportedOperationException("Not implemented yet");
+        return this.bazs;
     }
 
     public void addBaz(final Baz baz) {
-        throw new UnsupportedOperationException("Not implemented yet");
+        this.bazs.add(baz);
     }
 
     public Qux getQux() {
