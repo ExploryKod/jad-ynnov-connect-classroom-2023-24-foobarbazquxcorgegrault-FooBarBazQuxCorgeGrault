@@ -5,8 +5,16 @@
 
 - La base de code avec les commits qui met en place l'UML
 - Une explication avec une analogie concrète dans un fichier reflexion.md (à la racine de ce repo) : <a href='/reflexion.md'>cliquez ici </a>
-- Refactoring pour aller plus loin (clean code etc.)
+- Refactoring pour aller plus loin (clean code etc.) > donner plus de sens
 
+Le refactoring se trouve sur la branche `refactoring`. 
+Il faut choisir cette branche pour y accéder.
+
+Pour le fun j'ai aussi demandé à l'IA de créer une interface via JavaFx :<br>
+Compiler le projet : `
+Aller sur `refactoring` et compiler pour obtenir l'interface comme fenêtre de bureau :<br> 
+<a href='/installation.md'>voir la procédure d'installation</a>
+<br>
 ## Exercice : 
 
 ### Association - Agrégation - Composition
