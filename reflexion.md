@@ -4,7 +4,7 @@ Nous avons ces class :
 > nom initial > nom refactoré (clean code: naming) 
 
 - Bar
-- Baz
+- Baz > GrainFarmProductor (Plusieurs objets = "grains")
 - Corge
 - Foo > Moulin
 - Grault
@@ -15,7 +15,7 @@ Foo est la class principale qui gère les autres class. Par analogie c'est un mo
 ### Foo (Moulin) - Bar : association unidirectionnel 
 **Bar est une ferme voisine** : elle est autonome, peut exister sans le moulin (Foo). Foo connaît Bar : Foo peut prendre en compte les demandes de Bar car il sait lire les lettres envoyées par Bar (getBar). Bar n'a en revanche pas connaissance de Foo et n'aura donc aucune réponse en retour 
 
-### Baz et Foo (Moulin): Agrégation
+### Baz (GrainFarmProductor) et Foo (Moulin): Agrégation
 Baz est aussi un voisin, une ferme voisine qui produit des baz (grain). Il existe un contrat entre Baz et Foo : Foo a une relation commerciale avec Baz et Foo peut collecter et stocker des grains venant de chez Baz dans le moulin (les bazs). Chaque grain (baz) existe indépendament et Foo peut avoir plusieurs bazs.
 
 ### Qux et Foo (Moulin): composition

@@ -31,9 +31,9 @@ class MoulinTest {
     }
 
     @Test
-    void quxTest() {
+        void cabbageFarmTest() {
         Moulin moulin = new Moulin(new Bar());
-        assertNotNull(moulin.getQux(), "Qux should not be null");
+        assertNotNull(moulin.getCabbageFarm(), "CabbageFarm should not be null");
     }
 
     @Test

@@ -6,14 +6,14 @@ import java.util.List;
 public class Moulin {
     private Bar bar;
     private List<Grault> graults;
-    private Qux qux;
+    private CabbageFarm cabbageFarm;
     private List<GrainFarmProductor> grains;
     private Corge corge;
 
     public Moulin(final Bar bar) {
         this.bar = bar;
         this.graults = new ArrayList<>();
-        this.qux = new Qux();
+        this.cabbageFarm = new CabbageFarm();
         this.grains = new ArrayList<>();
         this.corge = null;
     }
@@ -30,8 +30,8 @@ public class Moulin {
         this.grains.add(grain);
     }
 
-    public Qux getQux() {
-         return this.qux;  
+    public CabbageFarm getCabbageFarm() {
+         return this.cabbageFarm;  
     }
 
     public List<Grault> getGraults() {
