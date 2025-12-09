@@ -5,14 +5,14 @@ import java.util.List;
 
 public class Moulin {
     private Bar bar;
-    private List<Grault> graults;
+    private List<WoodCrateProduction> woodCrateProductions;
     private CabbageFarm cabbageFarm;
     private List<GrainFarmProductor> grains;
     private Corge corge;
 
     public Moulin(final Bar bar) {
         this.bar = bar;
-        this.graults = new ArrayList<>();
+        this.woodCrateProductions = new ArrayList<>();
         this.cabbageFarm = new CabbageFarm();
         this.grains = new ArrayList<>();
         this.corge = null;
@@ -34,12 +34,12 @@ public class Moulin {
          return this.cabbageFarm;  
     }
 
-    public List<Grault> getGraults() {
-        return this.graults;
+    public List<WoodCrateProduction> getWoodCrateProductions() {
+        return this.woodCrateProductions;
     }
 
-    public void addGrault() {
-        this.graults.add(new Grault(this));
+    public void addWoodCrateProduction() {
+        this.woodCrateProductions.add(new WoodCrateProduction(this));
     }
 
     public Corge getCorge() {

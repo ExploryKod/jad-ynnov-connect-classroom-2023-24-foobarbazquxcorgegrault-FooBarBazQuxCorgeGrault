@@ -22,32 +22,32 @@ class MoulinTest {
             grains.add(new GrainFarmProductor());
         }
         Moulin moulin = new Moulin(new Bar());
-        assertEquals(0, moulin.getGrains().size(), "Grains should be empty by default");
+        assertEquals(0, moulin.getGrains().size(), "Grains farms should be empty by default");
         for (GrainFarmProductor grain : grains) {
             moulin.addGrain(grain);
         }
-        assertEquals(grainCount, moulin.getGrains().size(), "Grains should have " + grainCount + " elements");
-        assertTrue(moulin.getGrains().containsAll(grains), "Grains should contain all the Grains that were added");
+        assertEquals(grainCount, moulin.getGrains().size(), "Grains farms should have " + grainCount + " elements");
+        assertTrue(moulin.getGrains().containsAll(grains), "Grains farms should contain all the Grains that were added");
     }
 
     @Test
-        void cabbageFarmTest() {
+    void cabbageFarmTest() {
         Moulin moulin = new Moulin(new Bar());
-        assertNotNull(moulin.getCabbageFarm(), "CabbageFarm should not be null");
+        assertNotNull(moulin.getCabbageFarm(), "The cabbage farm should not be null");
     }
 
     @Test
-    void graultTest() {
-        final int grainGrault = 10;
+    void woodCrateProductionTest() {
+        final int woodCrateCount = 10;
         Moulin moulin = new Moulin(new Bar());
-        assertEquals(0, moulin.getGraults().size(), "Graults should be empty by default");
-        for (int i = 0; i < grainGrault; i++) {
-            moulin.addGrault();
+        assertEquals(0, moulin.getWoodCrateProductions().size(), "Wood crate productions should be empty by default");
+        for (int i = 0; i < woodCrateCount; i++) {
+            moulin.addWoodCrateProduction();
         }
-        assertEquals(grainGrault, moulin.getGraults().size(), "Graults should have " + grainGrault + " elements");
-        for (Grault grault : moulin.getGraults()) {
-            assertNotNull(grault, "Grault should not be null");
-            assertEquals(moulin, grault.getMoulin(), "Grault should have a reference to the Moulin that created it");
+        assertEquals(woodCrateCount, moulin.getWoodCrateProductions().size(), "Wood crate productions should have " + woodCrateCount + " elements");
+        for (WoodCrateProduction woodCrateProduction : moulin.getWoodCrateProductions()) {
+            assertNotNull(woodCrateProduction, "Wood crate production should not be null");
+            assertEquals(moulin, woodCrateProduction.getMoulin(), "Wood crate production should have a reference to the Moulin that created it");
         }
     }
 
