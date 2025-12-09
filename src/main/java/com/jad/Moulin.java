@@ -7,14 +7,14 @@ public class Moulin {
     private Bar bar;
     private List<Grault> graults;
     private Qux qux;
-    private List<Baz> bazs;
+    private List<GrainFarmProductor> grains;
     private Corge corge;
 
     public Moulin(final Bar bar) {
         this.bar = bar;
         this.graults = new ArrayList<>();
         this.qux = new Qux();
-        this.bazs = new ArrayList<>();
+        this.grains = new ArrayList<>();
         this.corge = null;
     }
 
@@ -22,12 +22,12 @@ public class Moulin {
         return this.bar;
     }
 
-    public List<Baz> getBazs() {
-        return this.bazs;
+    public List<GrainFarmProductor> getGrains() {
+        return this.grains;
     }
 
-    public void addBaz(final Baz baz) {
-        this.bazs.add(baz);
+    public void addGrain(final GrainFarmProductor grain) {
+        this.grains.add(grain);
     }
 
     public Qux getQux() {

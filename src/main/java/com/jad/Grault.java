@@ -10,7 +10,7 @@ public class Grault {
      * @param Moulin the Moulin associé au Grault
      */
     public Grault(final Moulin moulin) {
-        this.Moulin = Moulin;
+        this.moulin = moulin;
     }
 
     /**
@@ -18,6 +18,6 @@ public class Grault {
      * @return le Moulin associé au Grault
      */
     public Moulin getMoulin() {
-        return this.Moulin;
+        return this.moulin;
     }
 }

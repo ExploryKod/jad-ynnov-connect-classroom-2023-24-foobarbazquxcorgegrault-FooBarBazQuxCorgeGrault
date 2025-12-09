@@ -15,19 +15,19 @@ class MoulinTest {
     }
 
     @Test
-    void bazTest() {
-        final int bazCount = 10;
-        ArrayList<Baz> bazs = new ArrayList<>();
-        for (int i = 0; i < bazCount; i++) {
-            bazs.add(new Baz());
+    void grainFarmProductorTest() {
+        final int grainCount = 10;
+        ArrayList<GrainFarmProductor> grains = new ArrayList<>();
+        for (int i = 0; i < grainCount; i++) {
+            grains.add(new GrainFarmProductor());
         }
         Moulin moulin = new Moulin(new Bar());
-        assertEquals(0, moulin.getBazs().size(), "Bazs should be empty by default");
-        for (Baz baz : bazs) {
-            moulin.addBaz(baz);
+        assertEquals(0, moulin.getGrains().size(), "Grains should be empty by default");
+        for (GrainFarmProductor grain : grains) {
+            moulin.addGrain(grain);
         }
-        assertEquals(bazCount, Moulin.getBazs().size(), "Bazs should have " + bazCount + " elements");
-        assertTrue(moulin.getBazs().containsAll(bazs), "Bazs should contain all the Bazs that were added");
+        assertEquals(grainCount, moulin.getGrains().size(), "Grains should have " + grainCount + " elements");
+        assertTrue(moulin.getGrains().containsAll(grains), "Grains should contain all the Grains that were added");
     }
 
     @Test
@@ -38,14 +38,14 @@ class MoulinTest {
 
     @Test
     void graultTest() {
-        final int bazGrault = 10;
+        final int grainGrault = 10;
         Moulin moulin = new Moulin(new Bar());
         assertEquals(0, moulin.getGraults().size(), "Graults should be empty by default");
-        for (int i = 0; i < bazGrault; i++) {
-            Moulin.addGrault();
+        for (int i = 0; i < grainGrault; i++) {
+            moulin.addGrault();
         }
-        assertEquals(bazGrault, Moulin.getGraults().size(), "Graults should have " + bazGrault + " elements");
-        for (Grault grault : Moulin.getGraults()) {
+        assertEquals(grainGrault, moulin.getGraults().size(), "Graults should have " + grainGrault + " elements");
+        for (Grault grault : moulin.getGraults()) {
             assertNotNull(grault, "Grault should not be null");
             assertEquals(moulin, grault.getMoulin(), "Grault should have a reference to the Moulin that created it");
         }

@@ -6,35 +6,35 @@ public class Corge {
 
     public Corge(final Moulin moulin) {
 
-        if (Moulin != null && Moulin.getCorge() != null) {
-            Moulin.getCorge().setMoulin(null);
+        if (moulin != null && moulin.getCorge() != null) {
+            moulin.getCorge().setMoulin(null);
         }
       
-        this.Moulin = Moulin;
-        if (Moulin != null) {
-            Moulin.setCorge(this);
+        this.moulin = moulin;
+        if (moulin != null) {
+            moulin.setCorge(this);
         }
     }
 
     public Moulin getMoulin() {
-        return this.Moulin;
+        return this.moulin;
     }
 
     public void setMoulin(final Moulin moulin) {
 
-        if (this.Moulin == Moulin) {
+        if (this.moulin == moulin) {
             return;
         }
         
-        if (this.Moulin != null) {
-            Moulin temp = this.Moulin;
-            this.Moulin = null;
+        if (this.moulin != null) {
+            Moulin temp = this.moulin;
+            this.moulin = null;
             temp.setCorge(null);
         }
         
-        this.Moulin = Moulin;
-        if (Moulin != null) {
-            Moulin.setCorge(this);
+        this.moulin = moulin;
+        if (moulin != null) {
+            moulin.setCorge(this);
         }
     }
 }
