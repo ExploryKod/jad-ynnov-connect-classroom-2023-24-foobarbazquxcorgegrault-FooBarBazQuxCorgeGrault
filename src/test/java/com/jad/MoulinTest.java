@@ -52,22 +52,22 @@ class MoulinTest {
     }
 
     @Test
-    void corgeTest() {
+    void WindmillMarketTest() {
         Moulin moulin = new Moulin(new Bar());
-        Corge firstCorge = new Corge(moulin);
-        assertEquals(moulin, firstCorge.getMoulin(), "Moulin should be the same as the one passed to the constructor");
-        assertEquals(firstCorge, moulin.getCorge(), "Corge should be the same as the one passed to the constructor");
-        Corge secondCorge = new Corge(moulin);
-        assertEquals(moulin, secondCorge.getMoulin(), "Moulin should be the same as the one passed to the constructor");
-        assertEquals(secondCorge, moulin.getCorge(), "Corge should be the same as the one passed to the constructor");
-        assertNull(firstCorge.getMoulin(), "Moulin should be null after the second Corge is created");
-        moulin.setCorge(firstCorge);
-        assertEquals(firstCorge, moulin.getCorge(), "Corge should be the same as the one passed to the setter");
-        assertEquals(moulin, firstCorge.getMoulin(), "Moulin should be the same as the one passed to the setter");
-        assertNull(secondCorge.getMoulin(), "Moulin should be null after the first Corge is set to a different Moulin");
-        secondCorge.setMoulin(moulin);
-        assertEquals(moulin, secondCorge.getMoulin(), "Moulin should be the same as the one passed to the setter");
-        assertEquals(secondCorge, moulin.getCorge(), "Corge should be the same as the one passed to the setter");
-        assertNull(firstCorge.getMoulin(), "Moulin should be null after the second Corge is set to a different Moulin");
+        WindmillMarket firstWindmillMarket = new WindmillMarket(moulin);
+        assertEquals(moulin, firstWindmillMarket.getMoulin(), "Moulin should be the same as the one passed to the constructor");
+        assertEquals(firstWindmillMarket, moulin.getWindmillMarket(), "Windmill market should be the same as the one passed to the constructor");
+        WindmillMarket secondWindmillMarket = new WindmillMarket(moulin);
+        assertEquals(moulin, secondWindmillMarket.getMoulin(), "Moulin should be the same as the one passed to the constructor");
+        assertEquals(secondWindmillMarket, moulin.getWindmillMarket(), "Windmill market should be the same as the one passed to the constructor");
+        assertNull(firstWindmillMarket.getMoulin(), "Moulin should be null after the second Windmill market is created");
+        moulin.setWindmillMarket(firstWindmillMarket);
+        assertEquals(firstWindmillMarket, moulin.getWindmillMarket(), "Windmill market should be the same as the one passed to the setter");
+        assertEquals(moulin, firstWindmillMarket.getMoulin(), "Moulin should be the same as the one passed to the setter");
+        assertNull(secondWindmillMarket.getMoulin(), "Moulin should be null after the second Windmill market is set to a different Moulin");
+        secondWindmillMarket.setMoulin(moulin);
+        assertEquals(moulin, secondWindmillMarket.getMoulin(), "Moulin should be the same as the one passed to the setter");
+        assertEquals(secondWindmillMarket, moulin.getWindmillMarket(), "Windmill market should be the same as the one passed to the setter");
+        assertNull(firstWindmillMarket.getMoulin(), "Moulin should be null after the second Windmill market is set to a different Moulin");
     }
 }

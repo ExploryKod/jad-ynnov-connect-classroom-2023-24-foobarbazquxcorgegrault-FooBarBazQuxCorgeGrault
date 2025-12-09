@@ -8,14 +8,14 @@ public class Moulin {
     private List<WoodCrateProduction> woodCrateProductions;
     private CabbageFarm cabbageFarm;
     private List<GrainFarmProductor> grains;
-    private Corge corge;
+    private WindmillMarket windmillMarket;
 
     public Moulin(final Bar bar) {
         this.bar = bar;
         this.woodCrateProductions = new ArrayList<>();
         this.cabbageFarm = new CabbageFarm();
         this.grains = new ArrayList<>();
-        this.corge = null;
+        this.windmillMarket = null;
     }
 
     public Bar getBar() {
@@ -42,25 +42,25 @@ public class Moulin {
         this.woodCrateProductions.add(new WoodCrateProduction(this));
     }
 
-    public Corge getCorge() {
-        return this.corge;
+    public WindmillMarket getWindmillMarket() {
+        return this.windmillMarket;
     }
 
-    public void setCorge(final Corge corge) {
+    public void setWindmillMarket(final WindmillMarket windmillMarket) {
       
-        if (this.corge == corge) {
+        if (this.windmillMarket == windmillMarket) {
             return;
         }
 
-        if (this.corge != null) {
-            Corge temp = this.corge;
-            this.corge = null;
+        if (this.windmillMarket != null) {
+            WindmillMarket temp = this.windmillMarket;
+            this.windmillMarket = null;
             temp.setMoulin(null);
         }
         
-        this.corge = corge;
-        if (corge != null) {
-            corge.setMoulin(this);
+        this.windmillMarket = windmillMarket;
+        if (windmillMarket != null) {
+            windmillMarket.setMoulin(this);
         }
        
     }

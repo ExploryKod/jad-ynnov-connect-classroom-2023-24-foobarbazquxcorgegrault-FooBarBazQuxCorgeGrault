@@ -1,18 +1,18 @@
 package com.jad;
 
-public class Corge {
+public class WindmillMarket {
 
     private Moulin moulin;
 
-    public Corge(final Moulin moulin) {
+    public WindmillMarket(final Moulin moulin) {
 
-        if (moulin != null && moulin.getCorge() != null) {
-            moulin.getCorge().setMoulin(null);
+        if (moulin != null && moulin.getWindmillMarket() != null) {
+            moulin.getWindmillMarket().setMoulin(null);
         }
       
         this.moulin = moulin;
         if (moulin != null) {
-            moulin.setCorge(this);
+            moulin.setWindmillMarket(this);
         }
     }
 
@@ -29,12 +29,12 @@ public class Corge {
         if (this.moulin != null) {
             Moulin temp = this.moulin;
             this.moulin = null;
-            temp.setCorge(null);
+            temp.setWindmillMarket(null);
         }
         
         this.moulin = moulin;
         if (moulin != null) {
-            moulin.setCorge(this);
+            moulin.setWindmillMarket(this);
         }
     }
 }
