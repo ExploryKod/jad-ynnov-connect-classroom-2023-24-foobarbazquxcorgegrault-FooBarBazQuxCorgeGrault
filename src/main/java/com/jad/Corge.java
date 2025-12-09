@@ -2,39 +2,39 @@ package com.jad;
 
 public class Corge {
 
-    private Foo foo;
+    private Moulin moulin;
 
-    public Corge(final Foo foo) {
+    public Corge(final Moulin moulin) {
 
-        if (foo != null && foo.getCorge() != null) {
-            foo.getCorge().setFoo(null);
+        if (Moulin != null && Moulin.getCorge() != null) {
+            Moulin.getCorge().setMoulin(null);
         }
       
-        this.foo = foo;
-        if (foo != null) {
-            foo.setCorge(this);
+        this.Moulin = Moulin;
+        if (Moulin != null) {
+            Moulin.setCorge(this);
         }
     }
 
-    public Foo getFoo() {
-        return this.foo;
+    public Moulin getMoulin() {
+        return this.Moulin;
     }
 
-    public void setFoo(final Foo foo) {
+    public void setMoulin(final Moulin moulin) {
 
-        if (this.foo == foo) {
+        if (this.Moulin == Moulin) {
             return;
         }
         
-        if (this.foo != null) {
-            Foo temp = this.foo;
-            this.foo = null;
+        if (this.Moulin != null) {
+            Moulin temp = this.Moulin;
+            this.Moulin = null;
             temp.setCorge(null);
         }
         
-        this.foo = foo;
-        if (foo != null) {
-            foo.setCorge(this);
+        this.Moulin = Moulin;
+        if (Moulin != null) {
+            Moulin.setCorge(this);
         }
     }
 }

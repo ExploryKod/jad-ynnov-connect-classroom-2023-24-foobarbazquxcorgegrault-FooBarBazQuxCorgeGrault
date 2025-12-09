@@ -1,10 +1,19 @@
 # Foo-Bar-Baz-Qux-Corge-Grault
 
-# Association - Agrégation - Composition
+## Livrables 
+> par Amaury Franssen - master M2 Expert dev ynov
 
-# Made with ❤️ by [JAD](mailto:jeanaymeric@gmail.com)
+- La base de code avec les commits qui met en place l'UML
+- Une explication avec une analogie concrète dans un fichier reflexion.md (à la racine de ce repo) : <a href='/reflexion.md'>cliquez ici </a>
+- Refactoring pour aller plus loin (clean code etc.)
 
-## Objectif :
+## Exercice : 
+
+### Association - Agrégation - Composition
+
+#### Made with ❤️ by [JAD](mailto:jeanaymeric@gmail.com)
+
+### Objectif :
 
 Implémenter en Java le diagramme de classes suivant :
 

@@ -3,14 +3,14 @@ package com.jad;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Foo {
+public class Moulin {
     private Bar bar;
     private List<Grault> graults;
     private Qux qux;
     private List<Baz> bazs;
     private Corge corge;
 
-    public Foo(final Bar bar) {
+    public Moulin(final Bar bar) {
         this.bar = bar;
         this.graults = new ArrayList<>();
         this.qux = new Qux();
@@ -55,12 +55,12 @@ public class Foo {
         if (this.corge != null) {
             Corge temp = this.corge;
             this.corge = null;
-            temp.setFoo(null);
+            temp.setMoulin(null);
         }
         
         this.corge = corge;
         if (corge != null) {
-            corge.setFoo(this);
+            corge.setMoulin(this);
         }
        
     }

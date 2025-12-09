@@ -1,23 +1,23 @@
 package com.jad;
 
-// Un Grault ne peut pas être créé sans son Foo, 
-// Foo créé une collection de Grault par composition.
+// Un Grault ne peut pas être créé sans son Moulin, 
+// Moulin créé une collection de Grault par composition.
 public class Grault {
-    private Foo foo;
+    private Moulin moulin;
 
     /**
-     * Construire un nouveau Grault avec son Foo.
-     * @param foo the Foo associé au Grault
+     * Construire un nouveau Grault avec son Moulin.
+     * @param Moulin the Moulin associé au Grault
      */
-    public Grault(final Foo foo) {
-        this.foo = foo;
+    public Grault(final Moulin moulin) {
+        this.Moulin = Moulin;
     }
 
     /**
-     * Retourne le Foo associé au Grault.
-     * @return le Foo associé au Grault
+     * Retourne le Moulin associé au Grault.
+     * @return le Moulin associé au Grault
      */
-    public Foo getFoo() {
-        return this.foo;
+    public Moulin getMoulin() {
+        return this.Moulin;
     }
 }
