@@ -3,12 +3,12 @@
 Nous avons ces class : 
 > nom initial > nom refactoré (clean code: naming) 
 
-- Bar
+- Bar > NeighborFarm (une ferme voisine qui pourrait produire pour le Moulin en envoyant un contrat au Moulin)
 - Baz > GrainFarmProductor (Plusieurs objets = "grains")
-- Corge
+- Corge > WindmillMarket (le marché unique du moulin)
 - Foo > Moulin
 - Grault > WoodCratesProduction (Production de caisses en bois)
-- Qux
+- Qux > CabbageFarm (la ferme de choux qui produit pour le Moulin)
 
 Foo est la class principale qui gère les autres class. Par analogie c'est un moulin qui organise les flux de denrées.
 

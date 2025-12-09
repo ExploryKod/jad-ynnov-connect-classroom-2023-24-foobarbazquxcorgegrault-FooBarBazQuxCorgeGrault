@@ -4,22 +4,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Moulin {
-    private Bar bar;
+    private NeighborFarm neighborFarm;
     private List<WoodCrateProduction> woodCrateProductions;
     private CabbageFarm cabbageFarm;
     private List<GrainFarmProductor> grains;
     private WindmillMarket windmillMarket;
 
-    public Moulin(final Bar bar) {
-        this.bar = bar;
+    public Moulin(final NeighborFarm neighborFarm) {
+        this.neighborFarm = neighborFarm;
         this.woodCrateProductions = new ArrayList<>();
         this.cabbageFarm = new CabbageFarm();
         this.grains = new ArrayList<>();
         this.windmillMarket = null;
     }
 
-    public Bar getBar() {
-        return this.bar;
+    public NeighborFarm getNeighborFarm() {
+        return this.neighborFarm;
     }
 
     public List<GrainFarmProductor> getGrains() {

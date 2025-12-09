@@ -8,10 +8,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MoulinTest {
     @Test
-    void barTest() {
-        Bar bar = new Bar();
-        Moulin moulin = new Moulin(bar);
-        assertEquals(bar, moulin.getBar(), "Bar should be the same as the one passed to the constructor");
+    void neighborFarmTest() {
+        NeighborFarm neighborFarm = new NeighborFarm();
+        Moulin moulin = new Moulin(neighborFarm);
+        assertEquals(neighborFarm, moulin.getNeighborFarm(), "Neighbor farm should be the same as the one passed to the constructor");
     }
 
     @Test
@@ -21,7 +21,7 @@ class MoulinTest {
         for (int i = 0; i < grainCount; i++) {
             grains.add(new GrainFarmProductor());
         }
-        Moulin moulin = new Moulin(new Bar());
+        Moulin moulin = new Moulin(new NeighborFarm());
         assertEquals(0, moulin.getGrains().size(), "Grains farms should be empty by default");
         for (GrainFarmProductor grain : grains) {
             moulin.addGrain(grain);
@@ -32,14 +32,14 @@ class MoulinTest {
 
     @Test
     void cabbageFarmTest() {
-        Moulin moulin = new Moulin(new Bar());
+        Moulin moulin = new Moulin(new NeighborFarm());
         assertNotNull(moulin.getCabbageFarm(), "The cabbage farm should not be null");
     }
 
     @Test
     void woodCrateProductionTest() {
         final int woodCrateCount = 10;
-        Moulin moulin = new Moulin(new Bar());
+        Moulin moulin = new Moulin(new NeighborFarm());
         assertEquals(0, moulin.getWoodCrateProductions().size(), "Wood crate productions should be empty by default");
         for (int i = 0; i < woodCrateCount; i++) {
             moulin.addWoodCrateProduction();
@@ -52,8 +52,8 @@ class MoulinTest {
     }
 
     @Test
-    void WindmillMarketTest() {
-        Moulin moulin = new Moulin(new Bar());
+    void windmillMarketTest() {
+        Moulin moulin = new Moulin(new NeighborFarm());
         WindmillMarket firstWindmillMarket = new WindmillMarket(moulin);
         assertEquals(moulin, firstWindmillMarket.getMoulin(), "Moulin should be the same as the one passed to the constructor");
         assertEquals(firstWindmillMarket, moulin.getWindmillMarket(), "Windmill market should be the same as the one passed to the constructor");
