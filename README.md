@@ -10,6 +10,9 @@
 Le refactoring se trouve sur la branche `refactoring`. 
 Il faut choisir cette branche pour y accéder.
 
+Amélioration : 
+- Clean code : nommage meilleur des class
+
 Pour le fun j'ai aussi demandé à l'IA de créer une interface via JavaFx :<br>
 Compiler le projet : `
 Aller sur `refactoring` et compiler pour obtenir l'interface comme fenêtre de bureau :<br> 
